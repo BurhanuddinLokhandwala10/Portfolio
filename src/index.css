@@ -4,61 +4,37 @@
 
 @layer base {
   :root {
-    --bg-canvas: #FAFAFA;
-    --bg-surface: #FFFFFF;
-    --border-subtle: rgba(0, 0, 0, 0.08);
-    --text-primary: #0F172A;
-    --text-secondary: #475569;
+    --bg-page: #faf9f6;
+    --text-primary: #18181b;
+    --text-secondary: #52525b;
+    --border-color: #e4e4e7;
   }
 
   .dark {
-    --bg-canvas: #08090D;
-    --bg-surface: #10121A;
-    --border-subtle: rgba(255, 255, 255, 0.08);
-    --text-primary: #F1F5F9;
-    --text-secondary: #94A3B8;
+    --bg-page: #0f1012;
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+    --border-color: #27272a;
   }
 
   html {
     scroll-behavior: smooth;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
   body {
-    background-color: var(--bg-canvas);
+    background-color: var(--bg-page);
     color: var(--text-primary);
-    overflow-x: hidden;
+    line-height: 1.65;
   }
 }
 
-/* Engineering Dot Grid Background Texture */
-.bg-grid-pattern {
-  background-size: 28px 28px;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+::selection {
+  background-color: #27272a;
+  color: #fafafa;
 }
 
-.light .bg-grid-pattern {
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+.dark ::selection {
+  background-color: #3f3f46;
+  color: #fafafa;
 }
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(148, 163, 184, 0.25);
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 163, 184, 0.45);
-}
-
-/* Focus styles for keyboard accessibility */
-:focus-visible {
-  outline: 2px solid #10B981;
-  outline-offset: 2px;
-}
-
