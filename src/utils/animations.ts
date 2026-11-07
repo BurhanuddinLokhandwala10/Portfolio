@@ -1,8 +1,6 @@
 import { Variants } from 'framer-motion';
 
 // Reusable animation variants for consistent motion language across the portfolio.
-// All animations respect prefers-reduced-motion via the whileInView trigger setup.
-
 export const fadeInUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: {
